@@ -15,13 +15,7 @@ class ContentSchema extends Schema {
       .onUpdate('CASCADE')
       .onDelete('CASCADE')
       table.string('link')
-      table
-      .integer('type_id')
-      .unsigned()
-      .references('id')
-      .inTable('types')
-      .onUpdate('CASCADE')
-      .onDelete('CASCADE')
+      table.string('type')
       table.timestamps()
     })
   }
